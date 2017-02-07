@@ -1,1 +1,246 @@
 @charset "UTF-8";
+
+body {
+	background-color:black;
+}
+
+@media (min-width: 1px) {
+		.box {
+		background-color:black;
+		padding:1em;
+	}
+	
+	h1 {
+		font-size:16px;
+	}
+	
+	p {
+		font-size:10px;
+	}
+	
+	.gallery {
+		width:100%;;
+		font-size:0px;
+	}
+	 .pic {
+		width:80%;
+		margin-left:10%;
+		margin-right:10%;
+		margin-top:20%;
+		padding-top:80%;
+		color:white;
+		background-color:black;
+	}
+	
+	
+	h3 {
+		font-size:9px;
+	}
+	
+	h4 {
+		font-size:8px;
+	}
+	#desc {
+	width:90%;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+
+.caption{
+	position: absolute;
+	width:70%;
+}
+}
+
+@media (min-width: 768px) {
+	.box {
+		width:80%;
+		margin-left:10%;
+		margin-right:10%;
+		background-color:black;
+		padding:1em;
+	}
+	
+	h1 {
+		font-size:36px;
+	}
+	
+	p {
+		font-size:11px;
+	}
+	
+	.gallery {
+		width:80%;
+		margin-left:10%;
+		margin-right:10%;
+		font-size:0px;
+	}
+	 .pic {
+		width:50%;
+		padding-top:50%;
+		color:rgba(0,0,0,0.00);
+		position:relative;
+		background-color:black;
+	}
+	 .pic#a:hover, .pic#b:hover, .pic#c:hover, .pic#d:hover, .pic#e:hover, .pic#f:hover {
+		color:white;
+		background-image:none;
+	}
+	
+	.caption {
+		width:100%;
+		position: absolute;
+		top:10%;
+	}
+	
+	h3 {
+		font-size:9px;
+	}
+	
+	h4 {
+		font-size:8px;
+	}
+	#desc {
+	width:60%;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+ .pic {
+	display:inline-block;
+	margin:0px;
+	font-size:0px;
+}
+
+
+}
+
+@media (min-width: 1200px) {
+	.box {
+		width:80%;
+		margin-left:10%;
+		margin-right:10%;
+		background-color:black;
+		padding:2em;
+	}
+	
+	h1 {
+		font-size:46px;
+		line-height:40px;
+	}
+	
+	p {
+		font-size:12px;
+	}
+	
+	.gallery {
+		width:80%;
+		margin-left:10%;
+		margin-right:10%;
+		font-size:0px;
+	}
+	 .pic {
+		width:33%;
+		padding-top:33%;
+		color:rgba(0,0,0,0.00);
+		position:relative;
+		background-color:black;
+	}
+	 .pic#a:hover, .pic#b:hover, .pic#c:hover, .pic#d:hover, .pic#e:hover, .pic#f:hover {
+		color:white;
+		background-image:none;
+	}
+	
+	.caption {
+	width:100%;
+		position: absolute;
+		top:10%;
+	}
+	
+	h3 {
+		font-size:13px;
+	}
+	
+	h4 {
+		font-size:11px;
+	}
+	#desc {
+	width:40%;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+
+ .pic {
+	display:inline-block;
+	margin:0px;
+	font-size:0px;
+}
+
+}
+
+#hair {
+	background-color:white;
+	padding:1%;
+	margin-bottom:1%;
+}
+
+h1 {
+	font-family:'helvetica neue', sans-serif;
+	letter-spacing:.5px;
+	font-style:italic;
+	text-transform:uppercase;
+	
+}
+
+#header {
+	margin-top:0px;
+	margin-bottom:10px;
+}
+
+p {
+	font-family:'helvetica neue', 'helvetica', sans-serif;
+}
+
+		.pic#a {
+			background-image:url(blond.jpg);
+			background-size:cover;
+		}
+		
+		.pic#b {
+			background-image:url(untitledunmastered.jpg);
+			background-size:cover;
+		}
+		
+		.pic#c {
+			background-image:url(camp.jpg);
+			background-size:cover;
+		}
+		
+		.pic#d {
+			background-image:url(tlop.jpg);
+			background-size:cover;
+		}
+		
+		.pic#e {
+			background-image:url(lemonade.jpg);
+			background-size:cover;
+		}
+		
+		.pic#f {
+			background-image:url(coloringbook.jpg);
+			background-size:cover;
+		}
+
+
+
+.caption {
+		text-align:center;
+	font-family:monospace;
+}
+
+h3 {
+	font-weight:normal;
+}
+
+h4 {
+	font-weight:normal;
+}
