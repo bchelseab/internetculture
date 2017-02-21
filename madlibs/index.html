@@ -6,7 +6,14 @@
 
 <script language="javascript">
 	function name_enter(){
+<<<<<<< HEAD
     document.getElementById("story").innerHTML = "<p>Once upon a time there was a "+ document.nameform.input1.value + " who lived in a "+ document.nameform.input2.value +". The "+ document.nameform.input1.value +" had a very "+ document.nameform.input3.value +" life. Until his life began a downward spiral into crippling "+ document.nameform.input4.value+". His friends were "+ document.nameform.input5.value +" worried. One day, they decided to organize an intervention to try to help the " + document.nameform.input1.value +" regain some quality of life. Unfortunately, no one anticipated the "+ document.nameform.input6.value +" events that would follow. Upon confrontation, the "+ document.nameform.input1.value +" "+document.nameform.input7.value +" to the window and tossed himself down "+ document.nameform.input8.value +" stories to the traffic waiting below. His friends cried out in "+ document.nameform.input9.value +". Rest in peace, "+ document.nameform.input1.value +".</p>";
+=======
+    input = "<html><head><title>"+ "A story"+"</title>" +"</head><body><p>"+ "Once upon a time there was a "+ document.nameform.input1.value + " who lived in a "+ document.nameform.input2.value +". The "+ document.nameform.input1.value +" had a very "+ document.nameform.input3.value +" life. Until his life began a downward spiral into crippling "+ document.nameform.input4.value+". His friends were "+ document.nameform.input5.value +" worried. One day, they decided to organize an intervention to try to help the " + document.nameform.input1.value +" regain some quality of life. Unfortunately, no one anticipated the "+ document.nameform.input6.value +" events that would follow. Upon confrontation, the "+ document.nameform.input1.value +" "+document.nameform.input7.value +" to the window and tossed himself down "+ document.nameform.input8.value +" stories to the traffic waiting below. His friends cried out in "+ document.nameform.input9.value +". Rest in peace, "+ document.nameform.input1.value +"." +"</p></body></html>"
+	nameWin = window.open("","",",width=500,height=600,scrollbars=yes");
+	nameWin.document.write(input);
+	nameWin.document.close();
+>>>>>>> origin/master
 }
 
 </script>
@@ -61,8 +68,13 @@
 			<h4>Emotion</h4>
             
                 <input type="text" name="input9">
+<<<<<<< HEAD
 				<br />
             <input type="button" value="Create Story" onClick="name_enter()">
+=======
+		<br />		
+            <input type="button" value="Create story" onClick="name_enter()">
+>>>>>>> origin/master
             </form>
 			
         </div>
