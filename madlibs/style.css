@@ -9,14 +9,9 @@ body {
 	margin-left:15%;
 	margin-right:15%;
 	padding:2%;
-	text-align:center;
 }
 
 p {
-	width:70%;
-	background-color:white;
-	margin-left:15%;
-	margin-right:15%;
 	padding:2%;
 	font-family:'Helvetica Neue', 'Helvetica', sans-serif;
 }
@@ -24,14 +19,32 @@ p {
 h1 {
 	font-family:'Helvetica Neue', 'Helvetica', sans-serif;
 	color:#795985;
+	text-align:center;
 }
 
 h3 {
 	font-family:'Helvetica Neue', 'Helvetica', sans-serif;
 	font-weight:normal;
+	text-align:center;
 }
 
 h4 {
 	font-family:'Helvetica Neue', 'Helvetica', sans-serif;
 	font-weight:normal;
+}
+
+.storyboard {
+	width:38%;
+	display:inline-block;
+	position:relative;
+	border: solid 3px #795985;
+	padding:2%;
+}
+
+#story {
+	margin-right:13.5%;
+	margin-left:12%;
+	display:inline-block;
+	position:absolute;
+	border: solid 3px #795985;
 }
