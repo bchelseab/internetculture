@@ -1,0 +1,37 @@
+@charset "UTF-8";
+body {
+	background-color:#DCBDFF;
+}
+
+.box {
+	width:70%;
+	background-color:white;
+	margin-left:15%;
+	margin-right:15%;
+	padding:2%;
+	text-align:center;
+}
+
+p {
+	width:70%;
+	background-color:white;
+	margin-left:15%;
+	margin-right:15%;
+	padding:2%;
+	font-family:'Helvetica Neue', 'Helvetica', sans-serif;
+}
+
+h1 {
+	font-family:'Helvetica Neue', 'Helvetica', sans-serif;
+	color:#795985;
+}
+
+h3 {
+	font-family:'Helvetica Neue', 'Helvetica', sans-serif;
+	font-weight:normal;
+}
+
+h4 {
+	font-family:'Helvetica Neue', 'Helvetica', sans-serif;
+	font-weight:normal;
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mad Libs</title>
+
+<script language="javascript">
+	function name_enter(){
+    input = "<html><head><title>"+ "A story"+"</title>" +"</head><body><p>"+ "Once upon a time there was a "+ document.nameform.input1.value + " who lived in a "+ document.nameform.input2.value +". The "+ document.nameform.input1.value +" had a very "+ document.nameform.input3.value +" life. Until his life began a downward spiral into crippling "+ document.nameform.input4.value+". His friends were "+ document.nameform.input5.value +" worried. One day, they decided to organize an intervention to try to help the " + document.nameform.input1.value +" regain some quality of life. Unfortunately, no one anticipated the "+ document.nameform.input6.value +" events that would follow. Upon confrontation, the "+ document.nameform.input1.value +" "+document.nameform.input7.value +" to the window and tossed himself down "+ document.nameform.input8.value +" stories to the traffic waiting below. His friends cried out in "+ document.nameform.input9.value +". Rest in peace, "+ document.nameform.input1.value +"." +"</p></body></html>"
+	nameWin = window.open("","",",width=400,height=60,scrollbars=yes");
+	nameWin.document.write(input);
+	nameWin.document.close();
+}
+
+</script>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="box">
+	<h1>Digital Mad Libs</h1>
+    <h3>Fill in the blanks to create a unique story</h3>
+    	<div class="storyboard">
+            <h4>Noun</h4>
+            <form name="nameform">
+                <input type="text" name="input1">
+            
+			
+			<h4>Setting</h4>
+            
+                <input type="text" name="input2">
+				
+			
+			<h4>Adjective</h4>
+            
+                <input type="text" name="input3">
+           
+            
+			<h4>Disorder or illness</h4>
+            
+                <input type="text" name="input4">
+           
+			
+			<h4>Adverb ending in -ly</h4>
+            
+                <input type="text" name="input5">
+            
+			
+			<h4>Adjective</h4>
+            
+                <input type="text" name="input6">
+           
+			
+			<h4>Verb, past tense</h4>
+            
+                <input type="text" name="input7">
+            
+			
+			<h4>Number</h4>
+            
+                <input type="text" name="input8">
+            
+			
+			<h4>Emotion</h4>
+            
+                <input type="text" name="input9">
+				
+            <input type="button" value="Submit" onClick="name_enter()">
+            </form>
+			
+        </div>
+</div>
+</body>
+</html>
