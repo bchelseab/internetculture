@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>hot dog simulator</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="box">
+    	
+    <div class="visible" id="loadscrn">
+        <h1>Hot Dog Simulator</h1>
+        <p>Customize and purchase your virtual hot dog</p>
+        	<button id="playb">START</button>
+    </div>
+    
+    <div class="hidden" id="lunch">
+    	<h1>Hot Dog Simulator</h1>
+        
+        	<div class="toppings">
+            	<img src="web-button.jpg" class="condiment" id="ketchup" width=100px draggable="true" ondragstart="drag(event)" alt="ketchup">
+            </div>
+            
+            <div class="dog" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <span>.</span>
+            </div>
+    </div>
+    
+</div>
+ 
+ <script type="text/javascript">
+ var loadscrnDiv = document.getElementById('loadscrn');
+    var lunchDiv = document.getElementById('lunch');
+ 
+  playb.onclick = function() {
+        loadscrnDiv.setAttribute('class', 'hidden');
+		lunchDiv.setAttribute('class', 'visible');
+    };
+	
+	function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+ </script>
+</body>
+</html>

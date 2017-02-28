@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+body {
+	background-color:#EC2529;
+}
+
+.box {
+	width:70%;
+	margin-left:15%;
+	margin-right:15%;
+}
+
+.hidden {
+	display:none;
+}
+
+.visible {
+	display:block;
+}
+
+#loadscrn {
+	background-color:pink;
+	text-align:center;
+	padding:5%;
+}
+.toppings {
+	float:right;
+}
+#lunch {
+	background-color:yellow;
+	padding:5%;
+}
+
+#ketchup {
+	z-index:1;
+}
+
+.dog {
+	width:50%;
+	background-image:url(web-button.jpg);
+	background-size:cover;
+}
