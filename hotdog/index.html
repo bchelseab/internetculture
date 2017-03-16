@@ -17,7 +17,7 @@
     
     <div class="hidden" id="lunch">
     	<h1>Hot Dog Simulator</h1>
-        
+        <div class="droppable" >
         	<div class="condiments">
             <form name="condiments">
             	<input type="checkbox" name="ketchup" onclick = "decorate()"> <img src="web-button.jpg" class="stay" id="ketchup" width=100px alt="ketchup" /><br>
@@ -28,6 +28,8 @@
             <div class="dog">
             <span>.</span>
             </div>
+            
+    </div>
     </div>
     
 </div>
@@ -81,8 +83,7 @@
 					}      
 					};  
  
-			
-            InitDragDrop();
+						   InitDragDrop();
         
         function InitDragDrop()
         {
@@ -140,6 +141,8 @@
         {
             if (e == null) 
                 var e = window.event; 
+				
+				
         
             // this is the actual "drag code"
             _dragElement.style.left = (_offsetX + e.clientX - _startX) + 'px';
@@ -147,7 +150,7 @@
             
         
         }
-        
+		
         function OnMouseUp(e)
         {
             if (_dragElement != null)
@@ -176,9 +179,8 @@
         {
             return document.getElementById(id);
         }
+	
 			
-
-		
        
          </script>
 </body>

@@ -50,3 +50,8 @@ body {
 .condiments img {
 	z-index:1;
 }
+
+.droppable {
+	width:90%;
+	background-color:green;
+}
