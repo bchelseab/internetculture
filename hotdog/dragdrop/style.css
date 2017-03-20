@@ -2,7 +2,6 @@
 
 body {
 	background-color:#EC2529;
-	font-family:'Helvetica Neue', sans serif;
 }
 
 .box {
@@ -33,32 +32,19 @@ body {
 }
 
 
-#dog {
+.dog {
 	width:500px;
-	background-image:url(hotdog.png);
 	height:500px;
-	background-size:contain;
-	background-repeat:no-repeat;
-	
+	background-image:url(web-button.jpg);
+	background-size:cover;
 }
 
-#sausage {
-	width:inherit;
-	z-index:0;
-}
-	
-	
-
-.go { 
-position: relative; 
-z-index:1;}
+.drag { position: relative; }
 
 
 
 .condiments {
 	float:right;
-	width:20%;
-	
 	
 }
 
@@ -68,7 +54,7 @@ z-index:1;}
 
 .droppable {
 	width:90%;
-	background-color:white;
+	background-color:green;
 }
 
 #directions {
@@ -83,5 +69,7 @@ z-index:1;}
 }
 
 form[name="condiments"] {
-	height:450px;
+
+	
+
 }
