@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.hidden {
+	display:none;
+}
+
+.visible {
+	display:block;
+}
+
+body {
+	background-color:black;
+}
+
+#loadscrn {
+	background-color:pink;
+	width:50%;
+	margin-left:20%;
+	margin-right:20%;
+	padding:5%;
+}
+
+#game {
+	background-color:#7E7E7E;
+	width:70%;
+	margin-left:10%;
+	margin-right:10%;
+	padding:5%;
+}
+
+#camroll {
+	background-color:white;
+	width:35%;
+	margin-left:10%;
+	margin-right:5%;
+	display:inline-block;
+}
+
+#feed {
+	background-color:white;
+	width:35%;
+	margin-left:5%;
+	display:inline-block;
+}
+

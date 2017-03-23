@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Instafame Simulator</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="box">
+<!-- load screen -->
+	<div class="visible" id="loadscrn">
+    	<h1>Instafame Simulator</h1>
+        <h3>sick description here</h3>
+        	<form name="profiler">
+               <h4>Create Instafame handle:</h4> <input type="text" name="handle">
+               <h4>And a bio for your profile:</h4> <input type="text" name="bio">
+               
+               <input type="button" value="Let's Play" onClick="beginplay()">
+           	</form>
+    </div>
+<!-- game -->    
+    <div class="hidden" id="game">
+    
+    	<div id="camroll">
+        	<h2>camera roll</h2>
+        	<div class="inroll" id="firstpic">
+            	<img src="" />
+                <form><input type="button" value="Post" onClick="postit()"></form>
+            </div>
+            
+            
+            
+        </div>
+        
+        <div id="feed">
+        	<h1>InstaFame</h1>
+            <div id="handlehere"></div>
+            <h2>Followers:</h2> <div id="followers">0</div>
+            <div id="biohere"</div>
+            
+            <div id="gallery">
+            </div>
+        </div>
+    
+    </div>
+<!-- endscreen -->	
+    <div class="hidden" id="endscrn">
+    	<h1>Final score:</h1><div id="finalscore"</div>
+        <div id="endmsg"></div>
+        <button id="restartb">Play again</button>
+    </div>
+</div>
+
+
+
+<!-- begin js -->
+	<script type="text/javascript">
+    	
+		var loadscrnDiv = document.getElementById('loadscrn');
+		var gameDiv = document.getElementById('game');
+		var firstpicDiv = document.getElementById('firstpic');
+		var z = a + b + c + d + e + f
+		var a = 0;
+		var b = 0;
+		var c = 0;
+		var d = 0;
+		var e = 0;
+		var f = 0;
+		
+    	function beginplay() {
+                loadscrnDiv.setAttribute('class', 'hidden');
+                gameDiv.setAttribute('class', 'visible');
+				document.getElementById("handlehere").innerHTML = document.profiler.handle.value;
+				document.getElementById("biohere").innerHTML = document.profiler.bio.value;
+            };
+			
+		function postit() {      
+				firstpicDiv.setAttribute('class', 'outroll');    
+				
+				document.getElementById('gallery').appendChild(
+    document.getElementById('firstpic')
+  );
+				var a = 100;
+				document.getElementById("followers").innerHTML = z;
+			};  
+    
+    </script>
+<!-- end js -->
+</body>
+</html>
