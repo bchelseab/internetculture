@@ -25,10 +25,24 @@
     	<div id="camroll">
         	<h2>camera roll</h2>
         	<div class="inroll" id="firstpic">
-            	<img src="" />
-                <form><input type="button" value="Post" onClick="postit()"></form>
+            	<img src="lemonade.jpg" id="lemonade" />
+                <form><input type="button" value="Post" onClick="postit('firstpic')"></form>
             </div>
             
+            <div class="inroll" id="secondpic">
+            	<img src="coloringbook.jpg" id="cb" />
+                <form><input type="button" value="Post" onClick="postit('secondpic')"></form>
+            </div>
+            
+            <div class="inroll" id="thirdpic">
+            	<img src="coloringbook.jpg" />
+                <form><input type="button" value="Post" onClick="postit('thirdpic')"></form>
+            </div>
+            
+            <div class="inroll" id="fourthpic">
+            	<img src="coloringbook.jpg" />
+                <form><input type="button" value="Post" onClick="postit('fourthpic')"></form>
+            </div>
             
             
         </div>
@@ -37,7 +51,7 @@
         	<h1>InstaFame</h1>
             <div id="handlehere"></div>
             <h2>Followers:</h2> <div id="followers">0</div>
-            <div id="biohere"</div>
+            <div id="biohere"></div>
             
             <div id="gallery">
             </div>
@@ -46,9 +60,9 @@
     </div>
 <!-- endscreen -->	
     <div class="hidden" id="endscrn">
-    	<h1>Final score:</h1><div id="finalscore"</div>
+    	<h1>Final score:</h1><div id="finalscore"></div>
         <div id="endmsg"></div>
-        <button id="restartb">Play again</button>
+        <form><input type="button" value="Play again" onClick="window.location.href='https://bchelseab.github.io/internetculture/instafame/'"></form>
     </div>
 </div>
 
@@ -58,16 +72,33 @@
 	<script type="text/javascript">
     	
 		var loadscrnDiv = document.getElementById('loadscrn');
+		var endscrnDiv = document.getElementById('endscrn');
 		var gameDiv = document.getElementById('game');
 		var firstpicDiv = document.getElementById('firstpic');
-		var z = a + b + c + d + e + f
-		var a = 0;
-		var b = 0;
-		var c = 0;
-		var d = 0;
-		var e = 0;
-		var f = 0;
-		
+		var secondpicDiv = document.getElementById('secondpic');
+		var galleryDiv = document.getElementById('gallery');
+		var counter = 1;
+		var addfunc = function() {
+			
+				if(firstpicDiv.classList.contains('outroll') == true)      
+	{var a = 22;}
+	else {var a = 0;}
+	if(secondpicDiv.classList.contains('outroll') == true)      
+	{var b = -6;}
+	else {var b = 0;}
+	var z = a + b;
+				animateValue("followers", 0, z, 100);
+				document.getElementById("finalscore").innerHTML = z;
+				if (z >=16) {document.getElementById("endmsg").innerHTML = "You're cool";}
+				else {document.getElementById("endmsg").innerHTML = "You suck";}
+			};  
+   var endplay = function () {
+	   gameDiv.setAttribute('class', 'hidden');
+	   endscrnDiv.setAttribute('class', 'visible');
+   };
+
+
+	
     	function beginplay() {
                 loadscrnDiv.setAttribute('class', 'hidden');
                 gameDiv.setAttribute('class', 'visible');
@@ -75,15 +106,37 @@
 				document.getElementById("biohere").innerHTML = document.profiler.bio.value;
             };
 			
-		function postit() {      
-				firstpicDiv.setAttribute('class', 'outroll');    
+		function postit(picname) { 
+			if (counter < 4){
+        counter++
+        ;
+  
+				var q = document.getElementById(picname);     
+				q.setAttribute('class', 'outroll');    
 				
-				document.getElementById('gallery').appendChild(
-    document.getElementById('firstpic')
-  );
-				var a = 100;
-				document.getElementById("followers").innerHTML = z;
-			};  
+				galleryDiv.appendChild(q);
+				addfunc();}
+				if (counter >= 4){
+			setTimeout(endplay, 2000);}
+				};
+				
+		function animateValue(id, start, end, duration) {
+    var range = end - start;
+    var current = start;
+    var increment = end > start? 1 : -1;
+    var stepTime = Math.abs(Math.floor(duration / range));
+    var obj = document.getElementById(id);
+    var timer = setInterval(function() {
+        current += increment;
+        obj.innerHTML = current;
+        if (current == end) {
+            clearInterval(timer);
+        }
+    }, stepTime);
+}
+
+
+			
     
     </script>
 <!-- end js -->

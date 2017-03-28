@@ -21,6 +21,15 @@ body {
 	padding:5%;
 }
 
+#endscrn {
+	background-color:green;
+	width:50%;
+	margin-left:20%;
+	margin-right:20%;
+	padding:5%;
+}
+
+
 #game {
 	background-color:#7E7E7E;
 	width:70%;
@@ -44,3 +53,30 @@ body {
 	display:inline-block;
 }
 
+.inroll {
+	width:30%;
+	display:inline-block;
+	position:relative;
+}
+
+.inroll img {
+	width:100%;
+}
+
+.outroll {
+	width:30%;
+	position:relative;
+	display:inline-block;
+}
+
+.outroll img {
+	width:100%;
+}
+
+.outroll form {
+	display:none;
+}
+
+#gallery {
+	width:100%;
+}
