@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Needs
+ ================================================== -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Font Awesome, the iconic font and CSS framework">
+  <meta name="author" content="Dave Gandy">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Font Awesome Examples</title>
+
+  <!-- CSS
+  ================================================== -->
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/pygments.css">
+  
+ <!-- js
+ ================================================== --> 
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+<style>
+.bigger {
+	font-size:36px;
+}
+.big_icon {
+  font-size:72px;
+  color:#900;
+}
+.facebook {
+	font-size:72px;
+	color:#3b5998;
+}
+.twitter {
+	font-size:72px;
+	color:#6699bb;
+}
+.spacer {
+	margin-top:64px;
+}
+#centered {
+	text-align:center;
+}
+</style>
+</head>
+<body class="font-awesome ">
+
+<div class="jumbotron jumbotron-ad hidden-print">
+  <div class="container">
+    <h1><i class="fa fa-magic" aria-hidden="true"></i>&nbsp; Examples</h1>
+    <p>Lots of easy ways to use Font Awesome</p>
+    
+  </div>
+</div>
+
+<div class="container">
+	
+    <p class="lead">
+  	The icons can all be <a href="http://fontawesome.io/icons/">seen here</a>.<br>
+   </p>
+      <h2 class="page-header">
+        Social Reference
+      </h2>
+      <div class="row">
+        <div class="col-md-3 col-sm-4">
+          <p><a href="https://www.facebook.com/"><span class="facebook"><i class="fa fa-facebook-square"></i></a></span> 
+		  <a href="https://www.twitter.com/"><span class="twitter"><i class="fa fa-twitter-square"></i></span></a>
+		  </p>
+        </div><!--end of left column -->
+        <div class="col-md-9 col-sm-8">
+          <p>
+            Check out my Facebook page and follow me on Twitter!
+          </p>
+        </div><!--end of right column -->
+      </div><!--end of "row" -->
+	
+	<hr class="spacer">
+	
+    <section id="larger">
+    <h2 class="page-header">
+      Larger Icons
+    </h2>
+    <div class="row">
+      <div class="col-md-3 col-sm-4">
+		 <div style="font-size:75px; color:DarkBlue;">
+        <p><i class="fa fa-bicycle"></i></p>
+        <p><i class="fa fa-transgender-alt"></i></p>
+		 </div>
+      </div><!--end of left column -->
+      <div class="col-md-9 col-sm-8">
+        <p>
+          This example uses embedded markup and css to display larger icons:
+        </p>
+  <div class="highlight"><pre><code class="html">
+  &lt;div style=&quot;font-size:75px; color:DarkBlue;&quot;&gt;
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-bicycle&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-transgender-alt&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+  &lt;/div&gt;
+  </code></pre>
+     </div><!--end of "highlight" -->
+        <div class="alert alert-success">
+          <ul class="fa-ul">
+            <li>
+             <span class="bigger"> <i class="fa fa-exclamation-triangle"></i></span>
+              This warning triangle is wrapped in a "span" tag with a class defining the font size.
+            </li>
+          </ul>
+        </div><!--end of alert triangle -->
+      </div><!--end of right column -->
+    </div><!--end of "row" -->
+  </section>
+  
+<hr class="spacer">
+
+
+<div id="centered">
+	<p class="big_icon">
+	<i class="fa fa-calendar" aria-hidden="true"></i> 
+	<i class="fa fa-refresh fa-spin fa-fw"></i> 
+	<i class="fa fa-heart" aria-hidden="true"></i>
+	</p>
+(I need to remember to keep loving you.)
+</div><!--end of "centered" -->
+
+
+<hr class="spacer">
+</div><!--end of "container" -->
+
+  </body>
+</html>
