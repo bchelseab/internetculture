@@ -23,25 +23,27 @@
     <div class="hidden" id="game">
     
     	<div id="camroll">
+        <progress id="prog" value="0" max="4">
+</progress>
         	<h2>camera roll</h2>
         	<div class="inroll" id="firstpic">
             	<img src="lemonade.jpg" id="lemonade" />
-                <form><input type="button" value="Post" onClick="postit('firstpic')"></form>
+                <form><input type="button" value="Post" onClick="postit('firstpic', 22)"></form>
             </div>
             
             <div class="inroll" id="secondpic">
             	<img src="coloringbook.jpg" id="cb" />
-                <form><input type="button" value="Post" onClick="postit('secondpic')"></form>
+                <form><input type="button" value="Post" onClick="postit('secondpic', -6)"></form>
             </div>
             
             <div class="inroll" id="thirdpic">
             	<img src="coloringbook.jpg" />
-                <form><input type="button" value="Post" onClick="postit('thirdpic')"></form>
+                <form><input type="button" value="Post" onClick="postit('thirdpic', 4)"></form>
             </div>
             
             <div class="inroll" id="fourthpic">
             	<img src="coloringbook.jpg" />
-                <form><input type="button" value="Post" onClick="postit('fourthpic')"></form>
+                <form><input type="button" value="Post" onClick="postit('fourthpic', 100)"></form>
             </div>
             
             
@@ -49,8 +51,9 @@
         
         <div id="feed">
         	<h1>InstaFame</h1>
+            	
             <div id="handlehere"></div>
-            <h2>Followers:</h2> <div id="followers">0</div>
+            <h2>Followers:</h2><ol> <li value=0 id="followers"></li></ol>
             <div id="biohere"></div>
             
             <div id="gallery">
@@ -74,20 +77,14 @@
 		var loadscrnDiv = document.getElementById('loadscrn');
 		var endscrnDiv = document.getElementById('endscrn');
 		var gameDiv = document.getElementById('game');
-		var firstpicDiv = document.getElementById('firstpic');
-		var secondpicDiv = document.getElementById('secondpic');
 		var galleryDiv = document.getElementById('gallery');
+		
 		var counter = 1;
-		var addfunc = function() {
+		var addfunc = function(a) {
 			
-				if(firstpicDiv.classList.contains('outroll') == true)      
-	{var a = 22;}
-	else {var a = 0;}
-	if(secondpicDiv.classList.contains('outroll') == true)      
-	{var b = -6;}
-	else {var b = 0;}
-	var z = a + b;
-				animateValue("followers", 0, z, 100);
+	var z = a + document.getElementById("followers").value;
+				animateValue("followers", document.getElementById("followers").value, z, 1000);
+				document.getElementById("prog").value = counter;
 				document.getElementById("finalscore").innerHTML = z;
 				if (z >=16) {document.getElementById("endmsg").innerHTML = "You're cool";}
 				else {document.getElementById("endmsg").innerHTML = "You suck";}
@@ -106,7 +103,7 @@
 				document.getElementById("biohere").innerHTML = document.profiler.bio.value;
             };
 			
-		function postit(picname) { 
+		function postit(picname, a) { 
 			if (counter < 4){
         counter++
         ;
@@ -115,7 +112,7 @@
 				q.setAttribute('class', 'outroll');    
 				
 				galleryDiv.appendChild(q);
-				addfunc();}
+				addfunc(a);}
 				if (counter >= 4){
 			setTimeout(endplay, 2000);}
 				};
@@ -128,14 +125,12 @@
     var obj = document.getElementById(id);
     var timer = setInterval(function() {
         current += increment;
-        obj.innerHTML = current;
+        obj.value = current;
         if (current == end) {
             clearInterval(timer);
         }
     }, stepTime);
 }
-
-
 			
     
     </script>
