@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>Instafame Simulator</title>
 <link href="style.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
 </head>
 
 <body>
@@ -23,7 +24,7 @@
     <div class="hidden" id="game">
     
     	<div id="camroll">
-        <progress id="prog" value="0" max="5">
+        <progress id="prog" value="0" max="4">
 </progress>
         	<h2>camera roll</h2>
         	<div class="inroll" id="firstpic">
@@ -52,9 +53,23 @@
         <div id="feed">
         	<h1>InstaFame</h1>
             	
-            <h5><div id="handlehere"></div></h5>
-            <div id="about"><div id="biohere"></div>
-            <div id="followme"><h2>Followers:</h2><ol> <li value=0 id="followers"></li></ol></div>
+            
+            <div id="propic"></div>
+            <div id="about"><h5><div id="handlehere"></div></h5><div id="followme"><table>
+  <tbody>
+    <tr>
+      <th scope="col"><ol> <li value=0 id="posts"></li></ol></th>
+      <th scope="col"><ol> <li value=0 id="followers"></li></ol></th>
+      <th scope="col">666</th>
+    </tr>
+   <tr>
+      <td>posts</td>
+      <td>followers</td>
+      <td>following</td>
+    </tr>
+  </tbody>
+</table>
+</div><div id="biohere"></div>
             </div>
             
             <div id="gallery">
@@ -80,11 +95,12 @@
 		var gameDiv = document.getElementById('game');
 		var galleryDiv = document.getElementById('gallery');
 		
-		var counter = 1;
+		var counter = 0;
 		var addfunc = function(a) {
 			
 	var z = a + document.getElementById("followers").value;
 				animateValue("followers", document.getElementById("followers").value, z, 1000);
+				document.getElementById("posts").value = counter;
 				document.getElementById("prog").value = counter;
 				document.getElementById("finalscore").innerHTML = z;
 				if (z >=100) {document.getElementById("endmsg").innerHTML = "You're cool";}
@@ -114,7 +130,7 @@
             };
 			
 		function postit(picname, a) { 
-			if (counter < 5){
+			if (counter < 4){
         counter++
         ;
   
@@ -123,7 +139,7 @@
 				q.style.opacity = 0;
 				setTimeout(sendout, 500, q, a);     
 				}
-				if (counter >= 5){
+				if (counter >= 4){
 			setTimeout(endplay, 3000);}
 				};
 				
