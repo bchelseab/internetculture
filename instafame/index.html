@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Instafame Simulator</title>
 <link href="style.css" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700|Work+Sans:200|Lobster+Two" rel="stylesheet">
 </head>
 
 <body>
@@ -24,9 +24,8 @@
     <div class="hidden" id="game">
     
     	<div id="camroll">
-        <progress id="prog" value="0" max="4">
-</progress>
-        	<h2>camera roll</h2>
+    
+        	<h2>Camera Roll</h2>
         	<div class="inroll" id="firstpic">
                 <form><input type="button" class="postbutt" value="Post" onClick="postit('firstpic', 22)"></form>
             	<img src="lemonade.jpg" id="lemonade" />
@@ -51,21 +50,16 @@
         </div>
         
         <div id="feed">
-        	<h1>InstaFame</h1>
+        	<h1>Instafame</h1>
             	
             
             <div id="propic"></div>
             <div id="about"><h5><div id="handlehere"></div></h5><div id="followme"><table>
   <tbody>
-    <tr>
-      <th scope="col"><ol> <li value=0 id="posts"></li></ol></th>
-      <th scope="col"><ol> <li value=0 id="followers"></li></ol></th>
-      <th scope="col">666</th>
-    </tr>
    <tr>
-      <td>posts</td>
-      <td>followers</td>
-      <td>following</td>
+      <td><ul> <li value=0 id="posts">posts</li></ul></td>
+      <td><ul> <li value=0 id="followers">followers</li></ul></td>
+      <td><span style="font-weight:700; font-size:16px">666</span> <span style="font-size:14px">following</span></td>
     </tr>
   </tbody>
 </table>
@@ -101,7 +95,6 @@
 	var z = a + document.getElementById("followers").value;
 				animateValue("followers", document.getElementById("followers").value, z, 1000);
 				document.getElementById("posts").value = counter;
-				document.getElementById("prog").value = counter;
 				document.getElementById("finalscore").innerHTML = z;
 				if (z >=100) {document.getElementById("endmsg").innerHTML = "You're cool";}
 				else {document.getElementById("endmsg").innerHTML = "You suck";}

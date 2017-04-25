@@ -13,6 +13,7 @@
 body {
 	background-color:black;
 	margin:0px;
+	font-family: 'Roboto', sans-serif;
 }
 
 #loadscrn {
@@ -47,13 +48,14 @@ body {
 	width:31%;
 	display:inline-block;
 	position:relative;
-	padding:2% 0 2% 2%;
+	padding:0 0 2% 2%;
 	border:solid #9C9C9C;
 	border-width:50px 10px 50px 10px;
 	border-radius:12px;
 	height:60%;
 	margin-left:2%;
 	margin-top:5%;
+	overflow:scroll;
 }
 
 #feed {
@@ -64,7 +66,7 @@ body {
 	display:inline-block;
 	position:absolute;
 	padding-left:1.5%;
-	height:80%;
+	height:83%;
 }
 
 .inroll {
@@ -103,6 +105,7 @@ body {
 	padding-left:3.1%;
 	padding-top:3.1%;
 	background-color:white;
+	margin-top:3.1%;
 }
 
 .playbutt {
@@ -141,6 +144,13 @@ progress[value] {
 h1 {
 	text-align:center;
 	font-family: 'Lobster Two', cursive;
+	font-weight:normal;
+}
+
+h2 {
+	font-size:14px;
+	font-weight:500;
+	text-align:center;
 }
 
 h5 {
@@ -155,7 +165,10 @@ h5 {
 }
 
 
-
+#handlehere {
+	font-family: 'Work Sans', sans-serif;
+	font-size:24px;
+}
 
 
 #propic {
@@ -165,4 +178,34 @@ h5 {
 	border-radius:50%;
 	background-color:green;
 	display:inline-block;
+}
+
+table {
+	table-layout:fixed;
+	width:100%;
+}
+
+td {
+	font-family: 'Roboto', sans-serif;
+}
+
+ul {
+	list-style:none;
+	padding:0;
+}
+
+li {
+	font-family: 'Roboto', sans-serif;
+	font-size:14px;
+	display:inline;
+}
+
+li:before {
+    content: attr(value) ' ';
+	font-weight:700;
+	font-size:16px;
+}
+
+#biohere {
+	font-family: 'Roboto', sans-serif;
 }
