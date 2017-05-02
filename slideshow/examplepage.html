@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ColorFlow Slideshow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css">
+    <style>
+    html,body{
+    	height:100%;width:100%
+    }
+	.fadein { 
+	  position: absolute;
+	  margin-left:30%;
+	}
+ </style> 
+	<link rel="stylesheet" href="slideshow.css" type="text/css">
+	<script src="js/jquery.min.js"></script>
+	<script>
+	$(function(){
+		$('.fadein img:gt(0)').hide();
+		setInterval(function(){$('.fadein :first-child').fadeOut().next('img').fadeIn().end().appendTo('.fadein');}, 3000);
+	});
+	</script>
+</head>
+
+<body>
+<div class="fadein">
+  <img src="07.jpg">
+  <img src="13.jpg">
+  <img src="14.jpg">
+  <img src="15.jpg">
+</div>
+<progress id="prog" value="0" max="4"></progress>
+
+<script src="js/colorflow.min.js"></script>
+
+<script>
+    var colorflow1 = new ColorFlow({
+        element: ['body'],
+        background: ['#85144b', '#F012BE', '#FFBC00', '#7FDBFF', '#01FF70'],
+        text: ['#CF5D94', '#EFA9FA', '#665800', '#004966', '#00662C'],
+        time: 5
+    });
+</script>
+
+</body>
+</html>

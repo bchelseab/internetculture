@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Instafame Simulator</title>
 <link href="style.css" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700|Work+Sans:200|Lobster+Two" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,500,700|Work+Sans:200|Lobster+Two" rel="stylesheet">
 </head>
 
 <body>
@@ -12,10 +12,11 @@
 <!-- load screen -->
 	<div class="visible" id="loadscrn">
     	<h1>Instafame Simulator</h1>
-        <h3>sick description here</h3>
+        <h3>Become the Insta celeb of your dreams. Select six images from your camera roll to cultivate the ultimate online persona. But choose wisely, or you could end the game finding yourself just as unpopular as when you started.</h3>
         	<form name="profiler">
                <h4>Create Instafame handle:</h4> <input type="text" name="handle">
                <h4>And a bio for your profile:</h4> <input type="text" name="bio">
+               <br />
                
                <input type="button" class="playbutt" value="Let's Play" onClick="beginplay()">
            	</form>
@@ -24,8 +25,6 @@
     <div class="hidden" id="game">
     
     	<div id="camroll">
-    
-        	<h2>Camera Roll</h2>
         	<div class="inroll" id="firstpic">
                 <form><input type="button" class="postbutt" value="Post" onClick="postit('firstpic', 22)"></form>
             	<img src="lemonade.jpg" id="lemonade" />
@@ -50,8 +49,7 @@
         </div>
         
         <div id="feed">
-        	<h1>Instafame</h1>
-            	
+        	
             
             <div id="propic"></div>
             <div id="about"><h5><div id="handlehere"></div></h5><div id="followme"><table>
@@ -59,7 +57,7 @@
    <tr>
       <td><ul> <li value=0 id="posts">posts</li></ul></td>
       <td><ul> <li value=0 id="followers">followers</li></ul></td>
-      <td><span style="font-weight:700; font-size:16px">666</span> <span style="font-size:14px">following</span></td>
+      <td><span style="font-weight:700; font-size:1vw">666</span> <span style="font-size:1vw">following</span></td>
     </tr>
   </tbody>
 </table>
