@@ -25,28 +25,84 @@
     <div class="hidden" id="game">
     
     	<div id="camroll">
+        <div id="imagelist">
         	<div class="inroll" id="firstpic">
-                <form><input type="button" class="postbutt" value="Post" onClick="postit('firstpic', 22)"></form>
-            	<img src="lemonade.jpg" id="lemonade" />
+                <form><input type="button" class="postbutt" value="Post" onClick="postit('firstpic', 6)"></form>
+            	<img src="instapics-01.jpg" />
             </div>
             
             <div class="inroll" id="secondpic">
-                <form><input type="button" class="postbutt" value="Post" onClick="postit('secondpic', -6)"></form>
-            	<img src="coloringbook.jpg" id="cb" />
+                <form><input type="button" class="postbutt" value="Post" onClick="postit('secondpic', -80)"></form>
+            	<img src="instapics-02.jpg" />
             </div>
             
             <div class="inroll" id="thirdpic">
-                <form><input type="button" class="postbutt" value="Post" onClick="postit('thirdpic', 4)"></form>
-            	<img src="coloringbook.jpg" />
+                <form><input type="button" class="postbutt" value="Post" onClick="postit('thirdpic', 10)"></form>
+            	<img src="instapics-03.jpg" />
             </div>
             
             <div class="inroll" id="fourthpic">
-                <form><input type="button" class="postbutt" value="Post" onClick="postit('fourthpic', 100)"></form>
-            	<img src="coloringbook.jpg" />
+                <form><input type="button" class="postbutt" value="Post" onClick="postit('fourthpic', -30)"></form>
+            	<img src="instapics-04.jpg" />
+            </div>
+            
+            <div class="inroll" id="fifthpic">
+                <form><input type="button" class="postbutt" value="Post" onClick="postit('fifthpic', 100)"></form>
+            	<img src="instapics-05.jpg" />
+            </div>
+            
+            <div class="inroll" id="sixthpic">
+                <form><input type="button" class="postbutt" value="Post" onClick="postit('sixthpic', 420)"></form>
+            	<img src="instapics-06.jpg" />
+            </div>
+            
+            <div class="inroll" id="seventhpic">
+                <form><input type="button" class="postbutt" value="Post" onClick="postit('seventhpic', 400)"></form>
+            	<img src="instapics-07.jpg" />
+            </div>
+            
+            <div class="inroll" id="eighthpic">
+                <form><input type="button" class="postbutt" value="Post" onClick="postit('eighthpic', 123)"></form>
+            	<img src="instapics-08.jpg" />
+            </div>
+            
+            <div class="inroll" id="ninthpic">
+                <form><input type="button" class="postbutt" value="Post" onClick="postit('ninthpic', -10)"></form>
+            	<img src="instapics-09.jpg" />
+            </div>
+            
+            <div class="inroll" id="tenthpic">
+                <form><input type="button" class="postbutt" value="Post" onClick="postit('tenthpic', 2000)"></form>
+            	<img src="instapics-10.jpg" />
+            </div>
+            
+            <div class="inroll" id="eleventhpic">
+                <form><input type="button" class="postbutt" value="Post" onClick="postit('eleventhpic', 55)"></form>
+            	<img src="instapics-11.jpg" />
+            </div>
+            
+            <div class="inroll" id="twelfthpic">
+                <form><input type="button" class="postbutt" value="Post" onClick="postit('twelfthpic', 200)"></form>
+            	<img src="instapics-12.jpg" />
             </div>
             
             
-        </div>
+            <div class="inroll" id="thirteenthpic">
+                <form><input type="button" class="postbutt" value="Post" onClick="postit('thirteenthpic', 4)"></form>
+            	<img src="instapics-13.jpg" />
+            </div>
+            
+            <div class="inroll" id="fourteenthpic">
+                <form><input type="button" class="postbutt" value="Post" onClick="postit('fourteenthpic', -6)"></form>
+            	<img src="instapics-14.jpg" />
+            </div>
+            
+            <div class="inroll" id="fifteenthpic">
+                <form><input type="button" class="postbutt" value="Post" onClick="postit('fifteenthpic', 84)"></form>
+            	<img src="instapics-15.jpg" />
+            </div>
+            
+        </div></div>
         
         <div id="feed">
         	
@@ -94,8 +150,8 @@
 				animateValue("followers", document.getElementById("followers").value, z, 1000);
 				document.getElementById("posts").value = counter;
 				document.getElementById("finalscore").innerHTML = z;
-				if (z >=100) {document.getElementById("endmsg").innerHTML = "You're cool";}
-				else {document.getElementById("endmsg").innerHTML = "You suck";}
+				if (z >=1000) {document.getElementById("endmsg").innerHTML = "You did it! You're famous!";}
+				else {document.getElementById("endmsg").innerHTML = "Fame eludes you. Try harder next time.";}
 			};  
    var endplay = function () {
 	   gameDiv.style.transition = 'all ease 0.7s';
@@ -121,7 +177,7 @@
             };
 			
 		function postit(picname, a) { 
-			if (counter < 4){
+			if (counter < 6){
         counter++
         ;
   
@@ -130,7 +186,7 @@
 				q.style.opacity = 0;
 				setTimeout(sendout, 500, q, a);     
 				}
-				if (counter >= 4){
+				if (counter >= 6){
 			setTimeout(endplay, 3000);}
 				};
 				
